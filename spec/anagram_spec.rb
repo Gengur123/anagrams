@@ -39,10 +39,10 @@ end
 
 describe("is_antigram") do
   test1 = Anagram.new("hi", "bye")
-  test2 = Anagram.new("hiib", "bsii")
   it ("will return they are antigrams due to sharing no letters") do
     expect(test1.is_antigram()).to((eq("These are antigrams and share no letters")))
   end
+  test2 = Anagram.new("hiib", "bsii")
   it ("will return these words share some letters: s") do
     expect(test2.is_antigram()).to((eq("These words share some letters: bi")))
   end
