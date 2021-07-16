@@ -18,10 +18,15 @@ describe("wordconsistency") do
 end
 
 describe("is_anagram") do
-  test = Anagram.new("here come dots", "the morse code")
+  test = Anagram.new("Shaco", "chaos")
   test.wordconsistency()
   it ("will compare the 2 words and give a true becuase Shaco and Chaos are anagrams") do
     expect(test.is_anagram()).to((eq(true)))
+  end
+  test2 = Anagram.new("The Morse Code", "Here come dots")
+  test2.wordconsistency()
+  it("will compare 2 sentences and determin if its a true anagram or not") do
+    expect(test2.is_anagram()).to((eq(true)))
   end
 end
 
