@@ -2,9 +2,11 @@ require('rspec')
 require('anagram')
 require('pry')
 
-describe("Anagram#anagram") do 
-  it("will correctly put the words into an array than sort them from cba to abc") do
-    inputword1 = Anagram.new('cba','cba')
-    expect(word1.anagram?()).to(eq("abc"))
+describe ("wordconsistency") do
+  test = Anagram.new("S h A c O", "Chaos")
+  test.wordconsistency()
+  it("will take 2 words and then remove spaces and downcases them") do
+    expect(test.inputword1()).to((eq("shaco")))
+    expect(test.inputword2()).to((eq("chaos")))
   end
 end

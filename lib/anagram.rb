@@ -1,12 +1,14 @@
 class Anagram
-  def initialize(inputword1,inputword2)
+  attr_accessor(:inputword1, :inputword2, :sentence)
+
+  def initialize(inputword1, inputword2)
     @inputword1 = inputword1
     @inputword2 = inputword2
+    @sentence = sentence
   end
 
-  def anagram?
-    word1 = @inputword1.split("").sort.join
-    word2 = @inputword2.split("").sort.join
+  def wordconsistency()
+    self.inputword1 = self.inputword1.gsub(/\s+/, "").downcase()
+    self.inputword2 = self.inputword2.gsub(/\s+/, "").downcase()
   end
-
-end
+end 
