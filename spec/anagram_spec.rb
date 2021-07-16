@@ -3,16 +3,22 @@ require('anagram')
 require('pry')
 
 describe("wordconsistency") do
-  test = Anagram.new("S h A c O", "Chaos")
+  test = Anagram.new("ShAcO", "Chaos")
   test.wordconsistency()
-  it("will take 2 words and then remove spaces, downcases them make and array then sort them.") do
+  it("will take 2 words to compare by first making them all lower case then sort") do
     expect(test.inputword1()).to((eq("achos")))
     expect(test.inputword2()).to((eq("achos")))
+  end
+  test2 = Anagram.new("T E a", "E a T")
+  test2.wordconsistency()
+  it("will take 2 words to compare, these words have weird spacing and the program should take care of it.") do
+    expect(test2.inputword1()).to((eq("aet")))
+    expect(test2.inputword2()).to((eq("aet")))
   end
 end
 
 describe("is_anagram") do
-  test = Anagram.new("shaco", "chaos")
+  test = Anagram.new("here come dots", "the morse code")
   test.wordconsistency()
   it ("will compare the 2 words and give a true becuase Shaco and Chaos are anagrams") do
     expect(test.is_anagram()).to((eq(true)))
