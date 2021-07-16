@@ -12,6 +12,14 @@ class Anagram
     self.inputword2 = self.inputword2.gsub(/\s+/, "").downcase()
     self.inputword1 = self.inputword1.split("").sort.join
     self.inputword2 = self.inputword2.split("").sort.join
-
   end
+
+  def is_anagram()
+    if self.inputword1 === self.inputword2
+      return true
+    else
+      return false
+    end
+  end
+
 end 
