@@ -22,4 +22,14 @@ class Anagram
     end
   end
 
+  def is_word()
+    check1 = self.inputword1.match(/[aeiou]/)
+    check2 = self.inputword2.match(/[aeiou]/)
+    if (check1 === nil) || (check2 === nil) 
+      return false
+    else 
+      return true
+    end
+  end
+
 end 
