@@ -32,4 +32,14 @@ class Anagram
     end
   end
 
+  def is_antigram()
+    self.inputword1 = self.inputword1.split("").sort
+    self.inputword2 = self.inputword2.split("").sort
+    intersect = self.inputword1.&(self.inputword2)
+    if intersect === []
+      return result = "These are antigrams and share no letters"
+    else
+      return result = "These words share some letters: #{intersect.join}"
+    end
+  end
 end 
