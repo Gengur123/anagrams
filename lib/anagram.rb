@@ -10,5 +10,8 @@ class Anagram
   def wordconsistency()
     self.inputword1 = self.inputword1.gsub(/\s+/, "").downcase()
     self.inputword2 = self.inputword2.gsub(/\s+/, "").downcase()
+    self.inputword1 = self.inputword1.split("").sort.join
+    self.inputword2 = self.inputword2.split("").sort.join
+
   end
 end 
